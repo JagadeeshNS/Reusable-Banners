@@ -1,21 +1,20 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable no-unused-vars */
 import './index.css'
 
-const Banner = props => {
-  const {BannerDetails} = props
-  const {headerText, description, className} = BannerDetails
+const BannerCardItem = props => {
+  const {bannerDetails} = props
+  const {headerText, description, className} = bannerDetails
+
   return (
-    <li className={`${className} card`}>
+    <li className={`${className} banner-card-item`}>
       <div>
         <h1 className="heading">{headerText}</h1>
         <p className="description">{description}</p>
-        <div>
-          <button className="show-btn">Show more</button>
-        </div>
+        <button className="show-more-btn" type="button">
+          Show More
+        </button>
       </div>
     </li>
   )
 }
 
-export default Banner
+export default BannerCardItem
